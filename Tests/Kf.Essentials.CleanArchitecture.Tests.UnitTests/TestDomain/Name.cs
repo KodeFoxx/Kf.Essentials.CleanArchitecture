@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kf.Essentials.CleanArchitecture.Model;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
