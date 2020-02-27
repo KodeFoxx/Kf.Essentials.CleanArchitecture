@@ -48,7 +48,7 @@ Furthermore if you use a non-native type for your id, please consider overriding
         protected override bool CompareId(long a, long b)
         {
             // implement your custom compare logic between a and b  
-		}
+	}
     }    
 ```
 
