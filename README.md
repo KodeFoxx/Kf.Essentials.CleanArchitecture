@@ -21,7 +21,7 @@ Do feel free to post an issue if something might be broken.
 
 If you want some reading on what an entity and a value object represents, please read this blgpost [Entity vs Value Object: the ultimate list of differences](https://enterprisecraftsmanship.com/posts/entity-vs-value-object-the-ultimate-list-of-differences/).
 
-### <a name="entityoftid" /> Entity<TId> <small>[see implementation](https://github.com/KodeFoxx/Kf.Essentials.CleanArchitecture/blob/master/Source/Kf.Essentials.CleanArchitecture/Entity.cs)</small>
+### <a name="entityoftid" /> Entity<TId> <small style="font-size: 10px">((https://github.com/KodeFoxx/Kf.Essentials.CleanArchitecture/blob/master/Source/Kf.Essentials.CleanArchitecture/Entity.cs))</small>
 Abstract generic class giving you the benefit of not writing boilerplate for an entity base class. `TId` stands for the type of the id you use in your domain model. It is recommended when started your own project not just to implement directly from `Entity<TId>`, but to create your own implementation based on it. E.g.:
 ```
     public abstract class DomainEntity : Entity<long>
@@ -54,7 +54,7 @@ Furthermore if you use a non-native type for your id, please consider overriding
 
 Last of all, I refer to the [TestDomain](https://github.com/KodeFoxx/Kf.Essentials.CleanArchitecture/tree/master/Tests/Kf.Essentials.CleanArchitecture.Tests.UnitTests/TestDomain) for example usage.
 
-### <a name="valueobject" /> ValueObject <small>[see implementation](https://github.com/KodeFoxx/Kf.Essentials.CleanArchitecture/blob/master/Source/Kf.Essentials.CleanArchitecture/ValueObject.cs)</small>
+### <a name="valueobject" /> ValueObject <small style="font-size: 10px">([see implementation](https://github.com/KodeFoxx/Kf.Essentials.CleanArchitecture/blob/master/Source/Kf.Essentials.CleanArchitecture/ValueObject.cs))</small>
 Abstract class that provides you the benefit of not writing boilerplate for a valueobject base class.
 When inheriting from in you will need to override the [property `EquatableValues`](https://github.com/KodeFoxx/Kf.Essentials.CleanArchitecture/blob/master/Source/Kf.Essentials.CleanArchitecture/ValueObject.cs#L35), this is an `IEnumerable<object>` that represents all properties, fields in the object that need to be taken into account when being compared, it essentially defines how `Equals` and `HashCode` are calculated and thus defines the _"identity"_ of the object. Here's an example implementation.
 ```
