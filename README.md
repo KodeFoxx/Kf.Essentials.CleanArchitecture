@@ -9,6 +9,9 @@ The classes/tools available are:
 - [Domain modelling](#domainmodelling)
   - [`Entity<TId>`](#entityoftid)
   - [`ValueObject`](#valueobject)
+- [Commands and Queries](#commandsandqueries)
+  - [Queries](#queries)
+  - [Commands](#commands)
 
 ## Dependencies
 - [language-ext](https://github.com/louthy/language-ext)
@@ -73,3 +76,13 @@ When inheriting from in you will need to override the [property `EquatableValues
 ```
 
 Last of all, I refer to the [TestDomain](https://github.com/KodeFoxx/Kf.Essentials.CleanArchitecture/tree/master/Tests/Kf.Essentials.CleanArchitecture.Tests.UnitTests/TestDomain) for example usage.
+
+## <a name="commandsandqueries" /> Commands and Queries
+
+### <a name="queries" /> Queries
+<small style="font-size: 10px">([see implementation](https://github.com/KodeFoxx/Kf.Essentials.CleanArchitecture/blob/master/Source/Kf.Essentials.CleanArchitecture/Cqs/Queries/))</small>
+Set of interfaces and classes to provide an easy way to define a _(reusable) query_ that can be handled by a queryhandler. I refer to the [TestDomain](https://github.com/KodeFoxx/Kf.Essentials.CleanArchitecture/tree/master/Tests/Kf.Essentials.CleanArchitecture.Tests.UnitTests/TestDomain) for example usage.
+For optimal use make sure to register your `IQueryHandler<TQuery, TQueryResult>` with a DI container, either manually or by using an assembly scanner like [Scrutor](https://github.com/khellang/Scrutor).
+
+### <a name="queries" /> Commands
+/// todo

@@ -12,8 +12,5 @@ namespace Kf.Essentials.CleanArchitecture.Cqs.Queries
         public abstract Task<TQueryResult> HandleAsync(
             TQuery query,
             CancellationToken cancellationToken);
-
-        protected Option<TQueryResult> AsOptional(Func<TQueryResult> queryFunction)
-            => queryFunction();
     }
 }
