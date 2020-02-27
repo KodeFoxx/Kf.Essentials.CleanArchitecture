@@ -18,5 +18,8 @@
         { }
 
         public Name Name { get; }
+
+        public Person Rename(Name name)
+            => new Person(Id, name);
     }
 }
