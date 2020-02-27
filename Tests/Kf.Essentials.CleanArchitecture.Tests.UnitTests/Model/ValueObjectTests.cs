@@ -1,9 +1,8 @@
 ﻿using FluentAssertions;
 using Kf.Essentials.CleanArchitecture.Tests.UnitTests.TestDomain;
-using System;
 using Xunit;
 
-namespace Kf.Essentials.CleanArchitecture.Tests.UnitTests
+namespace Kf.Essentials.CleanArchitecture.Tests.UnitTests.Model
 {
     public sealed class ValueObjectTests
     {

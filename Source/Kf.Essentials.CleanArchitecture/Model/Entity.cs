@@ -2,7 +2,7 @@
 using System;
 using System.Diagnostics;
 
-namespace Kf.Essentials.CleanArchitecture
+namespace Kf.Essentials.CleanArchitecture.Model
 {
     /// <summary>
     /// Defines an entity.
@@ -49,7 +49,7 @@ namespace Kf.Essentials.CleanArchitecture
         /// <summary>
         /// Compares two <typeparamref name="TId"/>'s and returns true when they match, false when not.
         /// Override when using custom id's, or when applying special logic (e.g. when "0" doesn't matter).
-        /// </summary>        
+        /// </summary>
         protected virtual bool CompareId(TId a, TId b)
             => a.Equals(b);
 

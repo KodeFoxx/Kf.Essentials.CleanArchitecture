@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 
-namespace Kf.Essentials.CleanArchitecture
+namespace Kf.Essentials.CleanArchitecture.Model
 {
     /// <summary>
     /// Represents a value object.
