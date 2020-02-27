@@ -37,9 +37,26 @@ Abstract generic class giving you the benefit of not writing boilerplate for an 
     }
 ```
 
+Furthermore if you use a non-native type for your id, please consider overriding the [`CompareId` method](https://github.com/KodeFoxx/Kf.Essentials.CleanArchitecture/blob/master/Source/Kf.Essentials.CleanArchitecture/Entity.cs#L53) as this is implemented in the [`Equals` method](https://github.com/KodeFoxx/Kf.Essentials.CleanArchitecture/blob/master/Source/Kf.Essentials.CleanArchitecture/Entity.cs#L46). Overriding it means you can apply specific logic for your id type, or apply other domain specific logic determining the equality between two id's.
+```
+    public abstract class DomainEntity : Entity<long>
+    {
+        protected DomainEntity(long id) 
+            : base(id)
+        { }
+
+        protected override bool CompareId(long a, long b)
+        {
+            // implement your custom compare logic between a and b  
+		}
+    }    
+```
+
+Last of all, I refer to the [TestDomain](https://github.com/KodeFoxx/Kf.Essentials.CleanArchitecture/tree/master/Tests/Kf.Essentials.CleanArchitecture.Tests.UnitTests/TestDomain) for example usage.
+
 ### <a name="valueobject" /> ValueObject
 Abstract class that provides you the benefit of not writing boilerplate for a valueobject base class.
-When inheriting from in you will need to override the property `EquatableValues`, this is an `IEnumerable<object>` that represents all properties, fields in the object that need to be taken into account when being compared, it essentially defines how `Equals` and `HashCode` are calculated and thus defines the _"identity"_ of the object. Here's an example implementation.
+When inheriting from in you will need to override the [property `EquatableValues`](https://github.com/KodeFoxx/Kf.Essentials.CleanArchitecture/blob/master/Source/Kf.Essentials.CleanArchitecture/ValueObject.cs#L35), this is an `IEnumerable<object>` that represents all properties, fields in the object that need to be taken into account when being compared, it essentially defines how `Equals` and `HashCode` are calculated and thus defines the _"identity"_ of the object. Here's an example implementation.
 ```
     public sealed class Name : ValueObject
     {
@@ -53,3 +70,4 @@ When inheriting from in you will need to override the property `EquatableValues`
     }
 ```
 
+Last of all, I refer to the [TestDomain](https://github.com/KodeFoxx/Kf.Essentials.CleanArchitecture/tree/master/Tests/Kf.Essentials.CleanArchitecture.Tests.UnitTests/TestDomain) for example usage.
