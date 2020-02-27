@@ -90,12 +90,12 @@ For optimal use make sure to register your `IQueryHandler<TQuery, TQueryResult>`
         // other services...
         
         services.Scan(scan =>
-                scan           
-                    .FromAssembliesOf(typeof(SomeTypeWhereYourQueryHandlersAreLocated))
-                    .AddClasses(classes => classes.AssignableTo(typeof(IQueryHandler<,>)))
-                        .AsImplementedInterfaces()
-                        .WithScopedLifetime()
-                );
+            scan           
+                .FromAssembliesOf(typeof(SomeTypeWhereYourQueryHandlersAreLocated))
+                .AddClasses(classes => classes.AssignableTo(typeof(IQueryHandler<,>)))
+                    .AsImplementedInterfaces()
+                    .WithScopedLifetime()
+            );
     }
 ```
 
