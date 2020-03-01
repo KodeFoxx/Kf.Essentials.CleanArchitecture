@@ -36,7 +36,8 @@ namespace Kf.Essentials.CleanArchitecture.Tests.UnitTests.Cqs
                 CancellationToken.None
             );
 
-            result.Should().Be(newName);            
-        }
+            result.Should().Be(newName);
+            PeopleDatabase.FirstOrDefault(p => p.Id == 1).Name.Should().Be(newName);
+        }        
     }
 }

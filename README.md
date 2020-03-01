@@ -100,4 +100,8 @@ For optimal use make sure to register your `IQueryHandler<TQuery, TQueryResult>`
 ```
 
 ### <a name="commands" /> Commands
-/// todo
+<small style="font-size: 10px">([see implementation](https://github.com/KodeFoxx/Kf.Essentials.CleanArchitecture/blob/master/Source/Kf.Essentials.CleanArchitecture/Cqs/Commands/))</small>
+Set of interfaces and classes to provide an easy way to define a _command_ that can be handled by a commandhandler. I refer to the [TestDomain](https://github.com/KodeFoxx/Kf.Essentials.CleanArchitecture/tree/master/Tests/Kf.Essentials.CleanArchitecture.Tests.UnitTests/TestDomain) for example usage.
+
+The commands, unlike the queries, are built on top of [MediatR](https://github.com/jbogard/MediatR), this allows you to make sure your command has options to be plugged in to MediatR's pipeline behavior and support. However, this is not necessary.
+Queries are not built on top of this, but might be in the future, so they can also benefit of this behavior.

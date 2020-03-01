@@ -47,6 +47,10 @@ namespace Kf.Essentials.CleanArchitecture.Tests.UnitTests.TestDomain.UseCases
 
                 person = person.Rename(command.NewName);
 
+                // mimics the save a save method on a dbcontext, json file, or whatever
+                ((List<Person>)_database).Remove(person);
+                ((List<Person>)_database).Add(person);
+
                 return person.Name;                    
             }
         }
