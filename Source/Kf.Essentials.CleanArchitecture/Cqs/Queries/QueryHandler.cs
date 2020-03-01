@@ -12,5 +12,11 @@ namespace Kf.Essentials.CleanArchitecture.Cqs.Queries
         public abstract Task<TQueryResult> HandleAsync(
             TQuery query,
             CancellationToken cancellationToken);
+
+        public async Task<TQueryResult> Handle(
+            TQuery request,
+            CancellationToken cancellationToken
+        )
+            => await HandleAsync(request, cancellationToken);
     }
 }
