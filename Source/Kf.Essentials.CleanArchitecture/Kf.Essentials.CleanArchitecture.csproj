@@ -1,9 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.2.0</Version>
+    <Version>1.2.1</Version>
     <Authors>Yves Schelpe (KodeFox)</Authors>
     <Company>KodeFoxxYves Schelpe (KodeFox)</Company>
     <PackageProjectUrl>https://github.com/KodeFoxx/Kf.Essentials.CleanArchitecture/</PackageProjectUrl>
@@ -13,7 +13,10 @@
     <PackageIcon>kodefoxx-400x400-color-logo.png</PackageIcon>
     <PackageIconUrl />
     <Description>Helper classes, structures and extension methods used to form a base for pragmatic, clean architecture minded design.</Description>
-    <PackageReleaseNotes>- v1.2.0
+    <PackageReleaseNotes>- v1.2.1
+-- Updated to LanguageExt.Core 3.4.12, MediatR 8.0.1 and Kf.Essentials 1.4.1
+
+- v1.2.0
 -- Added ICommand, ICommand&lt;TResult&gt;, ICommandHandlerHandler&lt;TCommand&gt;, ICommandHandler&lt;TCommans, TCommandResult&gt; and CommandHandler abstract class for both interfaces. Added tests to showcase the usage. Also integrated MediatR for the IRequest behavior, so one can build on it for pipeline support.
 
 - v1.1.0
@@ -37,9 +40,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Kf.Essentials" Version="1.3.1" />
-    <PackageReference Include="LanguageExt.Core" Version="3.4.10" />
-    <PackageReference Include="MediatR" Version="8.0.0" />
+    <PackageReference Include="Kf.Essentials" Version="1.4.1" />
+    <PackageReference Include="LanguageExt.Core" Version="3.4.12" />
+    <PackageReference Include="MediatR" Version="8.0.1" />
   </ItemGroup>
 
   <ItemGroup>
