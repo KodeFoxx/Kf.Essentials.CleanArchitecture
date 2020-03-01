@@ -16,6 +16,7 @@ The classes/tools available are:
 ## Dependencies
 - [language-ext](https://github.com/louthy/language-ext)
 - [MediatR](https://github.com/jbogard/MediatR)
+- [Automapper](https://automapper.org/)
 - [KF.Essentials](https://github.com/KodeFoxx/Kf.Essentials)
 
 ## <a name="domainmodelling" /> Domain modelling
