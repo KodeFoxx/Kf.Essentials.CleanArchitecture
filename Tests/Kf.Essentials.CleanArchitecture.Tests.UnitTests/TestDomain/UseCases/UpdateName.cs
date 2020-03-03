@@ -11,7 +11,7 @@ namespace Kf.Essentials.CleanArchitecture.Tests.UnitTests.TestDomain.UseCases
 {
     public sealed class UpdateName
     {
-        public class Command : ICommand<Name>
+        public class Command : Command<Name>
         {
             public Command(Person person, Name newName)
             {

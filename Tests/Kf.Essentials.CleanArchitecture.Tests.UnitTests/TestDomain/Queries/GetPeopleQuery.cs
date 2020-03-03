@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kf.Essentials.CleanArchitecture.Tests.UnitTests.TestDomain.Queries
 {
-    public class GetPeopleQuery : IQuery<IEnumerable<Person>>
+    public class GetPeopleQuery : Query<IEnumerable<Person>>
     {
         public GetPeopleQuery(int amount)
             => Amount = amount;

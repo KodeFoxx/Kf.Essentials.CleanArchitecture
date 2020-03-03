@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Kf.Essentials.CleanArchitecture.Tests.UnitTests.TestDomain.Queries
 {
-    public class GetPersonByIdQuery : IQuery<Person>
+    public class GetPersonByIdQuery : Query<Person>
     {
         public GetPersonByIdQuery(long personId)
             => PersonId = personId;

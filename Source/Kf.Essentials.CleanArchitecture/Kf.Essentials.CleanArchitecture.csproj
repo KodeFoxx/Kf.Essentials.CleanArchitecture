@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.3.0</Version>
+    <Version>1.3.1</Version>
     <Authors>Yves Schelpe (KodeFox)</Authors>
     <Company>KodeFoxxYves Schelpe (KodeFox)</Company>
     <PackageProjectUrl>https://github.com/KodeFoxx/Kf.Essentials.CleanArchitecture/</PackageProjectUrl>
@@ -13,7 +13,10 @@
     <PackageIcon>kodefoxx-400x400-color-logo.png</PackageIcon>
     <PackageIconUrl />
     <Description>Helper classes, structures and extension methods used to form a base for pragmatic, clean architecture minded design.</Description>
-    <PackageReleaseNotes>- v1.3.0
+    <PackageReleaseNotes>- v1.3.1
+-- Added small update to include base abstract classes for Command, Command&lt;TResult&gt; and Query&lt;TResult&gt;
+
+- v1.3.0
 -- Added AutoMapper implementation and Dto/IDto base/interface alongside ServiceCollectionExtensions to configure automapper and mediatr
 
 - v1.2.2
