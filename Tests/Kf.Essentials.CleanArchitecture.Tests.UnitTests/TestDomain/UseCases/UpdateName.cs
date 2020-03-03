@@ -1,8 +1,6 @@
 ﻿using Kf.Essentials.CleanArchitecture.Cqs.Commands;
 using Kf.Essentials.CleanArchitecture.Cqs.Queries;
 using Kf.Essentials.CleanArchitecture.Tests.UnitTests.TestDomain.Queries;
-using LanguageExt;
-using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;

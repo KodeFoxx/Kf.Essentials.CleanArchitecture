@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.3.1</Version>
+    <Version>1.4.0</Version>
     <Authors>Yves Schelpe (KodeFox)</Authors>
     <Company>KodeFoxxYves Schelpe (KodeFox)</Company>
     <PackageProjectUrl>https://github.com/KodeFoxx/Kf.Essentials.CleanArchitecture/</PackageProjectUrl>
@@ -13,7 +13,11 @@
     <PackageIcon>kodefoxx-400x400-color-logo.png</PackageIcon>
     <PackageIconUrl />
     <Description>Helper classes, structures and extension methods used to form a base for pragmatic, clean architecture minded design.</Description>
-    <PackageReleaseNotes>- v1.3.1
+    <PackageReleaseNotes>- v1.4.0
+-- BREAKING CHANGE: Removed IDto and Dto. Please replace this directly with IMapFrom&lt;T&gt;. 
+-- Added params Assemblies[] to MappingProfile.
+
+- v1.3.1
 -- Added small update to include base abstract classes for Command, Command&lt;TResult&gt; and Query&lt;TResult&gt;
 
 - v1.3.0

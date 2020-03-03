@@ -7,12 +7,12 @@ namespace Kf.Essentials.CleanArchitecture.Mapping
 {
     public sealed class MappingProfile : Profile
     {
-        public MappingProfile()
-            => ApplyMappingsFromAssembly(Assembly.GetExecutingAssembly());
+        public MappingProfile(params Assembly[] assemblies)
+            => ApplyMappingsFromAssembly(assemblies.IfNullThen(new Assembly[] { Assembly.GetExecutingAssembly() }));        
 
-        private void ApplyMappingsFromAssembly(Assembly assembly)
+        private void ApplyMappingsFromAssembly(Assembly[] assemblies)
         {
-            var types = assembly.GetExportedTypes()
+            var types = assemblies.SelectMany(assembly => assembly.GetExportedTypes())
                 .Where(t => t.GetInterfaces().Any(i =>
                     i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IMapFrom<>)))
                 .ToList();
